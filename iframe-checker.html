@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>iframe-checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+  <body>
+    <h1></h1>
+  </body>
+  <script>
+    if (window.top !== window.self) {
+      document.getElementsByTagName("h1")[0].textContent = "in iframe";
+      document.getElementsByTagName("h1")[0].style.color = "green";
+      console.log("in iframe");
+    } else {
+      document.getElementsByTagName("h1")[0].textContent = "not in iframe";
+      document.getElementsByTagName("h1")[0].style.color = "red";
+      console.log("not in iframe");
+    }
+  </script>
+</html>
